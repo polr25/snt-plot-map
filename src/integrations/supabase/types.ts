@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      land_plots: {
+        Row: {
+          area_sqm: number | null
+          coordinates: Json | null
+          created_at: string
+          id: string
+          notes: string | null
+          owner_email: string | null
+          owner_name: string | null
+          owner_phone: string | null
+          plot_number: string
+          status: string | null
+          updated_at: string
+        }
+        Insert: {
+          area_sqm?: number | null
+          coordinates?: Json | null
+          created_at?: string
+          id?: string
+          notes?: string | null
+          owner_email?: string | null
+          owner_name?: string | null
+          owner_phone?: string | null
+          plot_number: string
+          status?: string | null
+          updated_at?: string
+        }
+        Update: {
+          area_sqm?: number | null
+          coordinates?: Json | null
+          created_at?: string
+          id?: string
+          notes?: string | null
+          owner_email?: string | null
+          owner_name?: string | null
+          owner_phone?: string | null
+          plot_number?: string
+          status?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
